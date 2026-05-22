@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-950 text-white selection:bg-blue-500/20 selection:text-blue-200 antialiased;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-950;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-800 rounded-full border-2 border-gray-950 hover:bg-gray-700 transition-colors;
+}
+
+/* Custom selection styling */
+::selection {
+  @apply bg-blue-500/20 text-blue-200;
+}
