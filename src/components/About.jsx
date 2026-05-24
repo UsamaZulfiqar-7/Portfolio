@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { personalInfo, stats } from "../data/config";
 import { useInView } from "../hooks/useInView";
+import profileImg from "./profile.jpeg";
 
 export default function About() {
   const ref = useRef(null);
@@ -27,13 +28,15 @@ export default function About() {
           <div className={`transition-all duration-700 delay-200 ${inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"}`}>
             {/* Avatar / Profile card */}
             <div className="relative mb-8">
-              <div className="w-48 h-48 mx-auto lg:mx-0 rounded-3xl bg-gradient-to-br from-blue-500/20 to-violet-500/20 border border-blue-500/20 flex items-center justify-center relative overflow-hidden">
-                {/* Placeholder avatar */}
-                <div className="w-32 h-32 rounded-2xl bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center text-6xl font-black text-white shadow-2xl">
-                  UZ
-                </div>
+              <div className="w-48 h-48 mx-auto lg:mx-0 rounded-3xl bg-gradient-to-br from-blue-500/20 to-violet-500/20 border border-blue-500/20 relative overflow-hidden group shadow-2xl shadow-black/40">
+                {/* Profile Image */}
+                <img 
+                  src={profileImg} 
+                  alt={personalInfo.name} 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
                 {/* Decorative elements */}
-                <div className="absolute top-3 right-3 w-3 h-3 rounded-full bg-green-400 shadow-lg shadow-green-400/50" />
+                <div className="absolute top-3 right-3 w-3.5 h-3.5 rounded-full bg-green-400 border-2 border-gray-950 shadow-lg shadow-green-400/50 z-10 animate-pulse" />
               </div>
             </div>
 

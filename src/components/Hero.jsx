@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { personalInfo, socialLinks } from "../data/config";
+import cvFile from "./Usama_Zulfiqar_CV (1).pdf";
+import profileImg from "./profile.jpeg";
 
 const typingTexts = [
   "Frontend Web Developer",
   "Data Analyst",
   "React.js Developer",
   "Power BI Expert",
-  "BSCS Final Year Student",
 ];
 
 function useTypingEffect(texts, speed = 80, pause = 2000) {
@@ -111,8 +112,8 @@ export default function Hero() {
               View Projects →
             </button>
             <a
-              href={personalInfo.resumeLink}
-              download
+              href={cvFile}
+              download="Usama_Zulfiqar_CV.pdf"
               className="px-6 py-3 border border-gray-600 hover:border-blue-400 text-gray-300 hover:text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:bg-blue-500/10"
             >
               Download CV ↓
@@ -159,26 +160,26 @@ export default function Hero() {
               style={{ animationDuration: "15s", animationDirection: "reverse" }} />
 
             {/* Central card */}
-            <div className="absolute inset-10 rounded-3xl bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700/50 flex items-center justify-center shadow-2xl overflow-hidden">
-              {/* Code editor mockup */}
-              <div className="w-full h-full p-4">
-                <div className="flex items-center gap-1.5 mb-3">
-                  <div className="w-3 h-3 rounded-full bg-red-400" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                  <div className="w-3 h-3 rounded-full bg-green-400" />
-                  <div className="ml-auto text-xs text-gray-500">portfolio.jsx</div>
+            <div className="absolute inset-10 rounded-3xl border border-gray-700/50 flex items-center justify-center shadow-2xl overflow-hidden group">
+              {/* Profile Photo as the background of the card */}
+              <img 
+                src={profileImg} 
+                alt={personalInfo.name} 
+                className="absolute inset-0 w-full h-full object-cover filter brightness-[0.8] group-hover:scale-105 transition-transform duration-700 ease-out" 
+              />
+              
+              {/* Frosted glass code overlay at the bottom */}
+              <div className="absolute bottom-3 left-3 right-3 bg-gray-950/80 backdrop-blur-md border border-gray-800/80 p-3.5 rounded-2xl font-mono text-[10px] sm:text-xs leading-normal opacity-90 transition-all duration-300 group-hover:bg-gray-950/90 shadow-lg z-10">
+                <div className="flex items-center gap-1.5 mb-2">
+                  <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
+                  <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
+                  <span className="ml-auto text-[8px] text-gray-500">status.js</span>
                 </div>
-                <div className="space-y-1.5 text-xs font-mono">
-                  <p><span className="text-violet-400">const</span> <span className="text-blue-300">dev</span> = {"{"}</p>
-                  <p className="pl-3"><span className="text-green-400">name</span>: <span className="text-orange-300">"Usama"</span>,</p>
-                  <p className="pl-3"><span className="text-green-400">role</span>: <span className="text-orange-300">"Full Stack"</span>,</p>
-                  <p className="pl-3"><span className="text-green-400">passion</span>: [</p>
-                  <p className="pl-6"><span className="text-orange-300">"React"</span>,</p>
-                  <p className="pl-6"><span className="text-orange-300">"Python"</span>,</p>
-                  <p className="pl-6"><span className="text-orange-300">"Data"</span>,</p>
-                  <p className="pl-3">],</p>
-                  <p>{"}"}</p>
-                </div>
+                <p className="text-violet-400">const <span className="text-blue-300">dev</span> = {"{"}</p>
+                <p className="pl-3 text-green-400">role: <span className="text-orange-300">"Frontend & Data"</span>,</p>
+                <p className="pl-3 text-green-400">status: <span className="text-orange-300">"Available"</span></p>
+                <p className="text-violet-400">{"}"}</p>
               </div>
             </div>
 
