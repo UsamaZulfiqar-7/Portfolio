@@ -56,7 +56,7 @@ export default function About() {
               {[
                 { label: "Name", value: personalInfo.name },
                 { label: "Location", value: personalInfo.location },
-                { label: "Email", value: "usamazulfiqar@email.com" },
+                { label: "Email", value: "usamazulfiqar173@email.com" },
                 { label: "Status", value: "Final Year Student" },
               ].map(({ label, value }) => (
                 <div key={label} className="flex flex-col gap-1">
