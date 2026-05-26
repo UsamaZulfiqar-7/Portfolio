@@ -1,1 +1,22 @@
-import { useState, useEffect } from \"react\";export function ScrollProgress() {const [progress, setProgress] = useState(0);useEffect(() => {const onScroll = () => {const el = document.documentElement;const scrolled = el.scrollTop / (el.scrollHeight - el.clientHeight);setProgress(scrolled * 100);};window.addEventListener(\"scroll\", onScroll);return () => window.removeEventListener(\"scroll\", onScroll);}, []);return (<div className=\"fixed top-0 left-0 right-0 z-[100] h-[3px]\"><div className=\"h-full bg-gradient-to-r from-blue-500 via-violet-500 to-cyan-400 transition-all duration-100\" style={{ width: `${progress}%` }} /></div>);}export default ScrollProgress;
+import { useState, useEffect } from "react";
+export function ScrollProgress() {
+  const [progress, setProgress] = useState(0);
+  useEffect(() => {
+    const onScroll = () => {
+      const el = document.documentElement;
+      const scrolled = el.scrollTop / (el.scrollHeight - el.clientHeight);
+      setProgress(scrolled * 100);
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+  return (
+    <div className="fixed top-0 left-0 right-0 z-[100] h-[3px]">
+      <div
+        className="h-full bg-gradient-to-r from-blue-500 via-violet-500 to-cyan-400 transition-all duration-100"
+        style={{ width: `${progress}%` }}
+      />
+    </div>
+  );
+}
+export default ScrollProgress;
