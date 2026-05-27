@@ -45,7 +45,7 @@ export default function Contact() {
                   href="mailto:usama@example.com"
                   className="text-gray-400 hover:text-blue-400 transition-colors"
                 >
-                  usama@example.com
+                  usamazulfiqar173@gmail.com
                 </a>
               </div>
             </div>
@@ -55,7 +55,7 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="text-white font-bold mb-1">Phone</h3>
-                <p className="text-gray-400">+92 321 1234567</p>
+                <p className="text-gray-400">+92 318 7499173</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
