@@ -10,7 +10,7 @@ export const socialLinks = {
   github: "https://github.com/UsamaZulfiqar-7",
   linkedin: "https://linkedin.com/in/usama-zulfiqar",
   twitter: "https://twitter.com",
-  email: "usama@example.com",
+  email: "usamazulfiqar173@gmail.com",
 };
 
 export const stats = [
