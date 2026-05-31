@@ -58,9 +58,9 @@ export default function About() {
             <div className="grid grid-cols-2 gap-4 mb-8">
               {[
                 { label: "Name", value: personalInfo.name },
-                { label: "Location", value: personalInfo.location },
+                { label: "Location", value: "Pakistan" },
                 { label: "Email", value: "usamazulfiqar173@email.com" },
-                { label: "Status", value: "Final Year Student" },
+                { label: "Status", value: "Available For Work" },
               ].map(({ label, value }) => (
                 <div key={label} className="flex flex-col gap-1">
                   <span className="text-gray-500 text-xs uppercase tracking-wider">
