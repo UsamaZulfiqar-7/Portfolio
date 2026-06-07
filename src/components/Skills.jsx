@@ -149,6 +149,7 @@ export default function Skills() {
               "Python",
               "Java",
               "MySQL",
+              "MongoDB",
               "Power BI",
               "Excel",
               "Git",
