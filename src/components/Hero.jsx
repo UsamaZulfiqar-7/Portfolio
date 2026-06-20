@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { personalInfo, socialLinks } from "../data/config";
 import profileImg from "./profile.jpeg";
+import cvPdf from "./Usama_Zulfiqar_CV.pdf";
 const typingTexts = [
   "Frontend Web Developer",
   "Data Analyst",
@@ -128,8 +129,7 @@ export default function Hero() {
               View Projects →
             </button>
             <a
-              href="#"
-              onClick={(e) => { e.preventDefault(); alert("CV is currently unavailable."); }}
+              href={cvPdf}
               download="Usama_Zulfiqar_CV.pdf"
               className="px-6 py-3 border border-gray-600 hover:border-blue-400 text-gray-300 hover:text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:bg-blue-500/10"
             >

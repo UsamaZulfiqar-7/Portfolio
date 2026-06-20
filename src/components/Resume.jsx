@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { personalInfo } from "../data/config";
 import { useInView } from "../hooks/useInView";
 import { FileText, Download, Briefcase, Sparkles } from "lucide-react";
+import resumePdf from "./Usama_Zulfiqar_Resume.pdf";
 
 export default function Resume() {
   const ref = useRef(null);
@@ -54,9 +55,8 @@ export default function Resume() {
             </p>
             <div className="flex flex-wrap gap-4">
               <a
-                href="#"
-                onClick={(e) => { e.preventDefault(); alert("Resume file is currently unavailable."); }}
-                download="Usama_Zulfiqar_CV.pdf"
+                href={resumePdf}
+                download="Usama_Zulfiqar_Resume.pdf"
                 className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-gradient-to-r from-blue-500 to-violet-600 hover:from-blue-400 hover:to-violet-500 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 transition-all hover:scale-105 duration-200"
               >
                 <Download className="w-5 h-5" />
