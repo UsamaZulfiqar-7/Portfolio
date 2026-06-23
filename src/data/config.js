@@ -8,7 +8,7 @@ export const personalInfo = {
 
 export const socialLinks = {
   github: "https://github.com/UsamaZulfiqar-7",
-  linkedin: "https://linkedin.com/in/usama-zulfiqar",
+  linkedin: "https://www.linkedin.com/in/rana-usama-1433aa278/?skipRedirect=true",
   twitter: "https://twitter.com",
   email: "usamazulfiqar173@gmail.com",
 };

@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter, Mail, ArrowUp } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowUp } from "lucide-react";
 import { socialLinks } from "../data/config";
 import { useState, useEffect } from "react";
 export default function Footer() {
@@ -107,16 +107,7 @@ export default function Footer() {
                   LinkedIn
                 </a>
               </li>
-              <li>
-                <a
-                  href={socialLinks.twitter}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-white transition-colors"
-                >
-                  Twitter
-                </a>
-              </li>
+
             </ul>
           </div>
           <div>
@@ -161,14 +152,7 @@ export default function Footer() {
             >
               <Linkedin className="w-5 h-5" />
             </a>
-            <a
-              href={socialLinks.twitter}
-              target="_blank"
-              rel="noreferrer"
-              className="w-10 h-10 rounded-xl bg-gray-800 hover:bg-blue-600 flex items-center justify-center transition-all hover:scale-110 duration-200"
-            >
-              <Twitter className="w-5 h-5" />
-            </a>
+
           </div>
           <button
             onClick={scrollToTop}
