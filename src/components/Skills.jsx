@@ -105,14 +105,18 @@ export default function Skills() {
             </button>
           ))}
         </div>
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-auto">
           {filtered.map((cat, i) => (
             <div
               key={cat.key}
-              className={`transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              className={`transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"} ${
+                cat.key === "frontend" ? "md:col-span-2 lg:col-span-2" : ""
+              } ${cat.key === "tools" ? "md:col-span-2 lg:col-span-1" : ""} ${
+                cat.key === "data" ? "lg:col-span-2" : ""
+              }`}
               style={{ transitionDelay: `${i * 100 + 300}ms` }}
             >
-              <div className="p-6 rounded-2xl bg-slate-100/60 dark:bg-gray-800/40 border border-slate-200/40 dark:border-gray-700/40 hover:border-slate-300 dark:hover:border-gray-600/60 transition-all duration-300 hover:-translate-y-1">
+              <div className="h-full p-6 flex flex-col justify-between rounded-3xl bg-slate-100/60 dark:bg-gray-800/40 border border-slate-200/40 dark:border-gray-700/40 hover:border-slate-300 dark:hover:border-gray-600/60 transition-all duration-300 hover:-translate-y-1 shadow-lg hover:shadow-xl">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500/20 to-violet-500/20 border border-blue-500/20 flex items-center justify-center text-xl">
                     {cat.icon}

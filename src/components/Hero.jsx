@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { personalInfo, socialLinks } from "../data/config";
 import profileImg from "./profile.jpeg";
 import cvPdf from "./Usama_Zulfiqar_CV.pdf";
+import { MagneticButton, Spotlight, RevealText } from "./ui/VengeanceUI";
 const typingTexts = [
   "Frontend Web Developer",
   "Data Analyst",
@@ -60,6 +61,7 @@ export default function Hero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
     >
       <div className="absolute inset-0 bg-slate-50 dark:bg-gray-950">
+        <Spotlight />
         <div
           className="absolute inset-0"
           style={{
@@ -106,12 +108,12 @@ export default function Hero() {
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
             Available for Work
           </div>
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white leading-tight mb-4">
-            Hi, I'm <br />
-            <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent">
-              {personalInfo.name}
+          <div className="text-5xl sm:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white leading-tight mb-4">
+            <RevealText text="Hi, I'm" className="mb-2" />
+            <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent inline-block">
+              <RevealText text={personalInfo.name} />
             </span>
-          </h1>
+          </div>
           <div className="h-10 flex items-center justify-center lg:justify-start mb-6">
             <span className="text-xl sm:text-2xl text-slate-700 dark:text-gray-300 font-light">
               {typedText}
@@ -122,25 +124,27 @@ export default function Hero() {
             {personalInfo.tagline}
           </p>
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-8">
-            <button
+            <MagneticButton
               onClick={() => scrollTo("#projects")}
-              className="px-6 py-3 bg-gradient-to-r from-blue-500 to-violet-600 hover:from-blue-400 hover:to-violet-500 text-slate-900 dark:text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/30"
+              className="px-6 py-3 bg-gradient-to-r from-blue-500 to-violet-600 hover:from-blue-400 hover:to-violet-500 text-slate-900 dark:text-white font-semibold rounded-xl transition-all duration-300 shadow-xl shadow-blue-500/30"
             >
               View Projects →
-            </button>
-            <a
-              href={cvPdf}
-              download="Usama_Zulfiqar_CV.pdf"
-              className="px-6 py-3 border border-slate-300 dark:border-gray-600 hover:border-blue-400 text-slate-700 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:bg-blue-500/10"
-            >
-              Download CV ↓
-            </a>
-            <button
+            </MagneticButton>
+            <MagneticButton className="p-0 border-0 bg-transparent shadow-none hover:shadow-none">
+              <a
+                href={cvPdf}
+                download="Usama_Zulfiqar_CV.pdf"
+                className="inline-block px-6 py-3 border border-slate-300 dark:border-gray-600 hover:border-blue-400 text-slate-700 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white font-semibold rounded-xl transition-all duration-300 hover:bg-blue-500/10"
+              >
+                Download CV ↓
+              </a>
+            </MagneticButton>
+            <MagneticButton
               onClick={() => scrollTo("#contact")}
-              className="px-6 py-3 border border-slate-300 dark:border-gray-600 hover:border-violet-400 text-slate-700 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:bg-violet-500/10"
+              className="px-6 py-3 border border-slate-300 dark:border-gray-600 hover:border-violet-400 text-slate-700 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white font-semibold rounded-xl transition-all duration-300 hover:bg-violet-500/10"
             >
               Contact Me
-            </button>
+            </MagneticButton>
           </div>
           <div className="flex items-center justify-center lg:justify-start gap-4">
             <a

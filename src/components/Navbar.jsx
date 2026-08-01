@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { useTheme } from "../App";
 const links = [
@@ -54,12 +55,19 @@ export default function Navbar() {
             USAMA<span className="text-blue-400">.</span>DEV
           </span>
         </button>
-        <ul className="hidden lg:flex items-center gap-1">
+        <ul className="hidden lg:flex items-center gap-1 relative">
           {links.map(({ href, label }) => (
-            <li key={href}>
+            <li key={href} className="relative">
+              {active === href.slice(1) && (
+                <motion.div
+                  layoutId="activeTab"
+                  className="absolute inset-0 bg-blue-500/10 dark:bg-gray-800 rounded-lg"
+                  transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
+                />
+              )}
               <button
                 onClick={() => scrollTo(href)}
-                className={`px-3 py-1.5 text-sm rounded-lg font-medium transition-all duration-200 ${active === href.slice(1) ? "text-blue-400 bg-blue-500/10" : "text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-gray-800"}`}
+                className={`relative z-10 px-3 py-1.5 text-sm rounded-lg font-medium transition-all duration-200 ${active === href.slice(1) ? "text-blue-500 dark:text-white" : "text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white"}`}
               >
                 {label}
               </button>

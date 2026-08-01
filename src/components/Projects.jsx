@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { projects } from "../data/config";
 import { useInView } from "../hooks/useInView";
 import { Github } from "lucide-react";
+import { TiltCard } from "./ui/SkiperUI";
 export default function Projects() {
   const ref = useRef(null);
   const inView = useInView(ref, 0.1);
@@ -57,11 +58,12 @@ export default function Projects() {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((p, i) => (
-            <div
+            <TiltCard
               key={p.id}
-              className={`group relative rounded-2xl bg-slate-100/60 dark:bg-gray-800/40 border border-slate-200/50 dark:border-gray-700/50 hover:border-slate-300/70 dark:hover:border-slate-300 dark:border-gray-600/70 overflow-hidden transition-all duration-500 flex flex-col ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              className={`group flex flex-col ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               style={{ transitionDelay: `${i * 100}ms` }}
             >
+              <div className="flex flex-col h-full rounded-2xl bg-slate-100/60 dark:bg-gray-800/40 border border-slate-200/50 dark:border-gray-700/50 overflow-hidden">
               <div
                 className={`h-48 bg-gradient-to-br ${p.gradient} relative flex items-center justify-center p-6 text-center overflow-hidden`}
               >
@@ -102,6 +104,7 @@ export default function Projects() {
                 </div>
               </div>
             </div>
+            </TiltCard>
           ))}
         </div>
       </div>
