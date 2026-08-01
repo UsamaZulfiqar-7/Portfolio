@@ -1,1 +1,17 @@
-@tailwind base;@tailwind components;@tailwind utilities;@layer base {body {@apply bg-gray-950 text-white selection:bg-blue-500/20 selection:text-blue-200 antialiased;}}::-webkit-scrollbar {width: 10px;}::-webkit-scrollbar-track {@apply bg-gray-950;}::-webkit-scrollbar-thumb {@apply bg-gray-800 rounded-full border-2 border-gray-950 hover:bg-gray-700 transition-colors;}::selection {@apply bg-blue-500/20 text-blue-200;}
+@tailwind base;@tailwind components;@tailwind utilities;@layer base {
+  body {
+    @apply bg-slate-50 dark:bg-gray-950 text-slate-900 dark:text-white selection:bg-blue-500/20 selection:text-blue-200 antialiased transition-colors duration-500;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-100 dark:bg-gray-950;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-gray-800 rounded-full border-2 border-slate-100 dark:border-gray-950 hover:bg-slate-400 dark:hover:bg-gray-700 transition-colors;
+}::selection {@apply bg-blue-500/20 text-blue-200;}

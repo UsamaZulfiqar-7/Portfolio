@@ -11,7 +11,7 @@ export default function About() {
       ref={ref}
       className="py-24 px-4 sm:px-6 relative overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gray-950">
+      <div className="absolute inset-0 bg-slate-50 dark:bg-gray-950">
         <div className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-5 bg-blue-500 blur-3xl" />
       </div>
       <div className="relative z-10 max-w-6xl mx-auto">
@@ -21,7 +21,7 @@ export default function About() {
           <span className="text-blue-400 font-semibold text-sm tracking-widest uppercase mb-3 block">
             Get To Know Me
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl font-black text-slate-900 dark:text-white mb-4">
             About{" "}
             <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
               Me
@@ -34,7 +34,7 @@ export default function About() {
             className={`transition-all duration-700 delay-200 ${inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"}`}
           >
             <div className="relative mb-8">
-              <div className="w-48 h-48 mx-auto lg:mx-0 rounded-3xl bg-gradient-to-br from-blue-500/20 to-violet-500/20 border border-blue-500/20 relative overflow-hidden group shadow-2xl shadow-black/40">
+              <div className="w-48 h-48 mx-auto lg:mx-0 rounded-3xl bg-gradient-to-br from-blue-500/20 to-violet-500/20 border border-blue-500/20 relative overflow-hidden group shadow-2xl shadow-slate-200/50 dark:shadow-black/40">
                 <img
                   src={profileImg}
                   alt={personalInfo.name}
@@ -43,13 +43,13 @@ export default function About() {
                 <div className="absolute top-3 right-3 w-3.5 h-3.5 rounded-full bg-green-400 border-2 border-gray-950 shadow-lg shadow-green-400/50 z-10 animate-pulse" />
               </div>
             </div>
-            <h3 className="text-2xl font-bold text-white mb-4">
+            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
               BSCS Final Year Student & Developer
             </h3>
-            <p className="text-gray-400 leading-relaxed mb-6">
+            <p className="text-slate-600 dark:text-gray-400 leading-relaxed mb-6">
               {personalInfo.bio}
             </p>
-            <p className="text-gray-400 leading-relaxed mb-8">
+            <p className="text-slate-600 dark:text-gray-400 leading-relaxed mb-8">
               Currently pursuing my Bachelor's in Computer Science, I've built
               expertise in both frontend development and data analytics. I'm
               passionate about AI, modern web technologies, and using data to
@@ -63,10 +63,10 @@ export default function About() {
                 { label: "Status", value: "Available For Work" },
               ].map(({ label, value }) => (
                 <div key={label} className="flex flex-col gap-1">
-                  <span className="text-gray-500 text-xs uppercase tracking-wider">
+                  <span className="text-slate-500 dark:text-gray-500 text-xs uppercase tracking-wider">
                     {label}
                   </span>
-                  <span className="text-white text-sm font-medium truncate">
+                  <span className="text-slate-900 dark:text-white text-sm font-medium truncate">
                     {value}
                   </span>
                 </div>
@@ -96,14 +96,14 @@ export default function About() {
               {stats.map(({ value, label }, i) => (
                 <div
                   key={label}
-                  className="p-6 rounded-2xl bg-gray-800/50 border border-gray-700/50 hover:border-blue-500/30 hover:bg-gray-800 transition-all duration-300 hover:-translate-y-1 group"
+                  className="p-6 rounded-2xl bg-slate-100/70 dark:bg-gray-800/50 border border-slate-200/50 dark:border-gray-700/50 hover:border-blue-500/30 hover:bg-slate-100 dark:hover:bg-gray-800 transition-all duration-300 hover:-translate-y-1 group"
                 >
                   <div
                     className={`text-3xl font-black mb-1 bg-gradient-to-r ${i === 0 ? "from-blue-400 to-cyan-400" : i === 1 ? "from-violet-400 to-pink-400" : i === 2 ? "from-orange-400 to-yellow-400" : "from-green-400 to-teal-400"} bg-clip-text text-transparent`}
                   >
                     {value}
                   </div>
-                  <div className="text-gray-400 text-sm">{label}</div>
+                  <div className="text-slate-600 dark:text-gray-400 text-sm">{label}</div>
                 </div>
               ))}
             </div>
@@ -132,16 +132,16 @@ export default function About() {
               ].map(({ icon, title, desc }) => (
                 <div
                   key={title}
-                  className="flex items-center gap-4 p-4 rounded-xl bg-gray-800/30 border border-gray-700/30 hover:border-gray-600/50 hover:bg-gray-800/50 transition-all duration-300 group"
+                  className="flex items-center gap-4 p-4 rounded-xl bg-slate-100/50 dark:bg-gray-800/30 border border-slate-200/30 dark:border-gray-700/30 hover:border-slate-300/50 dark:hover:border-slate-300 dark:border-gray-600/50 hover:bg-slate-100/70 dark:hover:bg-slate-100 dark:bg-gray-800/50 transition-all duration-300 group"
                 >
                   <div className="w-10 h-10 rounded-xl bg-gray-700 flex items-center justify-center text-xl flex-shrink-0 group-hover:scale-110 transition-transform duration-200">
                     {icon}
                   </div>
                   <div>
-                    <div className="text-white font-semibold text-sm">
+                    <div className="text-slate-900 dark:text-white font-semibold text-sm">
                       {title}
                     </div>
-                    <div className="text-gray-500 text-xs">{desc}</div>
+                    <div className="text-slate-500 dark:text-gray-500 text-xs">{desc}</div>
                   </div>
                 </div>
               ))}

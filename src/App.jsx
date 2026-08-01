@@ -36,7 +36,7 @@ export default function App() {
         className={dark ? "dark" : ""}
         style={{ fontFamily: "'Syne', sans-serif" }}
       >
-        <div className="bg-gray-950 dark:bg-gray-950 text-white min-h-screen transition-colors duration-500">
+        <div className="bg-slate-50 dark:bg-gray-950 dark:bg-gray-950 text-slate-900 dark:text-white min-h-screen transition-colors duration-500">
           <CursorGlow />
           <ScrollProgress />
           <Navbar />

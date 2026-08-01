@@ -10,7 +10,7 @@ export default function Services() {
       ref={ref}
       className="py-24 px-4 sm:px-6 relative overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gray-950">
+      <div className="absolute inset-0 bg-slate-50 dark:bg-gray-950">
         <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full opacity-5 bg-blue-500 blur-3xl" />
       </div>
       <div className="relative z-10 max-w-6xl mx-auto">
@@ -20,7 +20,7 @@ export default function Services() {
           <span className="text-blue-400 font-semibold text-sm tracking-widest uppercase mb-3 block">
             Service Offerings
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl font-black text-slate-900 dark:text-white mb-4">
             Professional{" "}
             <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
               Services
@@ -32,7 +32,7 @@ export default function Services() {
           {services.map((service, i) => (
             <div
               key={service.title}
-              className={`p-8 rounded-2xl bg-gray-800/40 border border-gray-700/50 hover:border-gray-600/70 hover:-translate-y-1.5 transition-all duration-500 relative overflow-hidden group flex flex-col ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+              className={`p-8 rounded-2xl bg-slate-100/60 dark:bg-gray-800/40 border border-slate-200/50 dark:border-gray-700/50 hover:border-slate-300/70 dark:hover:border-slate-300 dark:border-gray-600/70 hover:-translate-y-1.5 transition-all duration-500 relative overflow-hidden group flex flex-col ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               <div
@@ -41,14 +41,14 @@ export default function Services() {
               <div
                 className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.gradient} p-0.5 mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-black/20`}
               >
-                <div className="w-full h-full rounded-2xl bg-gray-900 flex items-center justify-center text-2xl">
+                <div className="w-full h-full rounded-2xl bg-white dark:bg-gray-900 flex items-center justify-center text-2xl">
                   {service.icon}
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-blue-400 transition-colors">
                 {service.title}
               </h3>
-              <p className="text-gray-400 text-sm leading-relaxed flex-1">
+              <p className="text-slate-600 dark:text-gray-400 text-sm leading-relaxed flex-1">
                 {service.description}
               </p>
               <div

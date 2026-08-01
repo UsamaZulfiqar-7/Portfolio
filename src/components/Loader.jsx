@@ -15,7 +15,7 @@ export default function Loader() {
   }, []);
   return (
     <div
-      className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-gray-950"
+      className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-slate-50 dark:bg-gray-950"
       style={{ fontFamily: "'Syne', sans-serif" }}
     >
       <div className="absolute inset-0 overflow-hidden">
@@ -50,20 +50,20 @@ export default function Loader() {
           </div>
         </div>
         <div className="text-center">
-          <h1 className="text-3xl font-black tracking-wider text-white mb-1">
+          <h1 className="text-3xl font-black tracking-wider text-slate-900 dark:text-white mb-1">
             USAMA ZULFIQAR
           </h1>
           <p className="text-blue-400 text-sm tracking-[0.3em] uppercase">
             Portfolio Loading...
           </p>
         </div>
-        <div className="w-64 h-1 bg-gray-800 rounded-full overflow-hidden">
+        <div className="w-64 h-1 bg-slate-100 dark:bg-gray-800 rounded-full overflow-hidden">
           <div
             className="h-full bg-gradient-to-r from-blue-500 to-violet-500 rounded-full transition-all duration-150 ease-out"
             style={{ width: `${Math.min(progress, 100)}%` }}
           />
         </div>
-        <p className="text-gray-500 text-xs">
+        <p className="text-slate-500 dark:text-gray-500 text-xs">
           {Math.min(Math.round(progress), 100)}%
         </p>
       </div>

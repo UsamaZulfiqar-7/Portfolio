@@ -59,7 +59,7 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
     >
-      <div className="absolute inset-0 bg-gray-950">
+      <div className="absolute inset-0 bg-slate-50 dark:bg-gray-950">
         <div
           className="absolute inset-0"
           style={{
@@ -106,38 +106,38 @@ export default function Hero() {
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
             Available for Work
           </div>
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight mb-4">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white leading-tight mb-4">
             Hi, I'm <br />
             <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent">
               {personalInfo.name}
             </span>
           </h1>
           <div className="h-10 flex items-center justify-center lg:justify-start mb-6">
-            <span className="text-xl sm:text-2xl text-gray-300 font-light">
+            <span className="text-xl sm:text-2xl text-slate-700 dark:text-gray-300 font-light">
               {typedText}
               <span className="inline-block w-0.5 h-6 bg-blue-400 ml-1 animate-pulse" />
             </span>
           </div>
-          <p className="text-gray-400 text-lg max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+          <p className="text-slate-600 dark:text-gray-400 text-lg max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
             {personalInfo.tagline}
           </p>
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-8">
             <button
               onClick={() => scrollTo("#projects")}
-              className="px-6 py-3 bg-gradient-to-r from-blue-500 to-violet-600 hover:from-blue-400 hover:to-violet-500 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/30"
+              className="px-6 py-3 bg-gradient-to-r from-blue-500 to-violet-600 hover:from-blue-400 hover:to-violet-500 text-slate-900 dark:text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/30"
             >
               View Projects →
             </button>
             <a
               href={cvPdf}
               download="Usama_Zulfiqar_CV.pdf"
-              className="px-6 py-3 border border-gray-600 hover:border-blue-400 text-gray-300 hover:text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:bg-blue-500/10"
+              className="px-6 py-3 border border-slate-300 dark:border-gray-600 hover:border-blue-400 text-slate-700 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:bg-blue-500/10"
             >
               Download CV ↓
             </a>
             <button
               onClick={() => scrollTo("#contact")}
-              className="px-6 py-3 border border-gray-600 hover:border-violet-400 text-gray-300 hover:text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:bg-violet-500/10"
+              className="px-6 py-3 border border-slate-300 dark:border-gray-600 hover:border-violet-400 text-slate-700 dark:text-gray-300 hover:text-slate-900 dark:hover:text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105 hover:bg-violet-500/10"
             >
               Contact Me
             </button>
@@ -147,7 +147,7 @@ export default function Hero() {
               href={socialLinks.github}
               target="_blank"
               rel="noreferrer"
-              className="w-11 h-11 rounded-xl bg-gray-800 hover:bg-gray-700 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-200 hover:scale-110 hover:-translate-y-1 text-xl"
+              className="w-11 h-11 rounded-xl bg-slate-100 dark:bg-gray-800 hover:bg-gray-700 flex items-center justify-center text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white transition-all duration-200 hover:scale-110 hover:-translate-y-1 text-xl"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
                 <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
@@ -157,7 +157,7 @@ export default function Hero() {
               href={socialLinks.linkedin}
               target="_blank"
               rel="noreferrer"
-              className="w-11 h-11 rounded-xl bg-gray-800 hover:bg-blue-600/20 border border-transparent hover:border-blue-500/30 flex items-center justify-center text-gray-400 hover:text-blue-400 transition-all duration-200 hover:scale-110 hover:-translate-y-1"
+              className="w-11 h-11 rounded-xl bg-slate-100 dark:bg-gray-800 hover:bg-blue-600/20 border border-transparent hover:border-blue-500/30 flex items-center justify-center text-slate-600 dark:text-gray-400 hover:text-blue-400 transition-all duration-200 hover:scale-110 hover:-translate-y-1"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
                 <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -165,7 +165,7 @@ export default function Hero() {
             </a>
             <a
               href={socialLinks.gmail}
-              className="w-11 h-11 rounded-xl bg-gray-800 hover:bg-red-500/20 border border-transparent hover:border-red-500/30 flex items-center justify-center text-gray-400 hover:text-red-400 transition-all duration-200 hover:scale-110 hover:-translate-y-1"
+              className="w-11 h-11 rounded-xl bg-slate-100 dark:bg-gray-800 hover:bg-red-500/20 border border-transparent hover:border-red-500/30 flex items-center justify-center text-slate-600 dark:text-gray-400 hover:text-red-400 transition-all duration-200 hover:scale-110 hover:-translate-y-1"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
                 <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.908 1.528-1.147C21.69 2.28 24 3.434 24 5.457z" />
@@ -188,18 +188,18 @@ export default function Hero() {
                 animationDirection: "reverse",
               }}
             />
-            <div className="absolute inset-10 rounded-3xl border border-gray-700/50 flex items-center justify-center shadow-2xl overflow-hidden group">
+            <div className="absolute inset-10 rounded-3xl border border-slate-200/50 dark:border-gray-700/50 flex items-center justify-center shadow-2xl overflow-hidden group">
               <img
                 src={profileImg}
                 alt={personalInfo.name}
                 className="absolute inset-0 w-full h-full object-cover filter brightness-[0.8] group-hover:scale-105 transition-transform duration-700 ease-out"
               />
-              <div className="absolute bottom-3 left-3 right-3 bg-gray-950/80 backdrop-blur-md border border-gray-800/80 p-3.5 rounded-2xl font-mono text-[10px] sm:text-xs leading-normal opacity-90 transition-all duration-300 group-hover:bg-gray-950/90 shadow-lg z-10">
+              <div className="absolute bottom-3 left-3 right-3 bg-slate-50/80 dark:bg-gray-950/80 backdrop-blur-md border border-slate-200/80 dark:border-gray-800/80 p-3.5 rounded-2xl font-mono text-[10px] sm:text-xs leading-normal opacity-90 transition-all duration-300 group-hover:bg-slate-50/90 dark:group-hover:bg-slate-50 dark:-hover:bg-gray-950/90 shadow-lg z-10">
                 <div className="flex items-center gap-1.5 mb-2">
                   <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
                   <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />
                   <div className="w-2.5 h-2.5 rounded-full bg-green-400" />
-                  <span className="ml-auto text-[8px] text-gray-500">
+                  <span className="ml-auto text-[8px] text-slate-500 dark:text-gray-500">
                     status.js
                   </span>
                 </div>
@@ -236,7 +236,7 @@ export default function Hero() {
             ].map(({ label, color, pos }) => (
               <div
                 key={label}
-                className={`absolute ${pos} px-3 py-1.5 bg-gray-800/90 backdrop-blur-sm border border-gray-700 rounded-lg text-xs font-semibold ${color} shadow-lg`}
+                className={`absolute ${pos} px-3 py-1.5 bg-slate-100/90 dark:bg-gray-800/90 backdrop-blur-sm border border-slate-200 dark:border-gray-700 rounded-lg text-xs font-semibold ${color} shadow-lg`}
               >
                 {label}
               </div>
@@ -245,10 +245,10 @@ export default function Hero() {
         </div>
       </div>
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-        <span className="text-gray-500 text-xs tracking-widest uppercase">
+        <span className="text-slate-500 dark:text-gray-500 text-xs tracking-widest uppercase">
           Scroll
         </span>
-        <div className="w-5 h-8 rounded-full border border-gray-600 flex items-start justify-center p-1">
+        <div className="w-5 h-8 rounded-full border border-slate-300 dark:border-gray-600 flex items-start justify-center p-1">
           <div className="w-1 h-2 rounded-full bg-blue-400 animate-bounce" />
         </div>
       </div>

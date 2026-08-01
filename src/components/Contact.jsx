@@ -13,7 +13,7 @@ export default function Contact() {
       ref={ref}
       className="py-24 px-4 sm:px-6 relative overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gray-950">
+      <div className="absolute inset-0 bg-slate-50 dark:bg-gray-950">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-5 bg-blue-500 blur-3xl" />
       </div>
       <div className="relative z-10 max-w-5xl mx-auto">
@@ -23,7 +23,7 @@ export default function Contact() {
           <span className="text-blue-400 font-semibold text-sm tracking-widest uppercase mb-3 block">
             Get In Touch
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl font-black text-slate-900 dark:text-white mb-4">
             Let's Work{" "}
             <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
               Together
@@ -40,10 +40,10 @@ export default function Contact() {
                 <Mail className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="text-white font-bold mb-1">Email</h3>
+                <h3 className="text-slate-900 dark:text-white font-bold mb-1">Email</h3>
                 <a
                   href="mailto:usama@example.com"
-                  className="text-gray-400 hover:text-blue-400 transition-colors"
+                  className="text-slate-600 dark:text-gray-400 hover:text-blue-400 transition-colors"
                 >
                   usamazulfiqar173@gmail.com
                 </a>
@@ -54,8 +54,8 @@ export default function Contact() {
                 <Phone className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="text-white font-bold mb-1">Phone</h3>
-                <p className="text-gray-400">+92 318 7499173</p>
+                <h3 className="text-slate-900 dark:text-white font-bold mb-1">Phone</h3>
+                <p className="text-slate-600 dark:text-gray-400">+92 318 7499173</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
@@ -63,8 +63,8 @@ export default function Contact() {
                 <MapPin className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="text-white font-bold mb-1">Location</h3>
-                <p className="text-gray-400">Pakistan</p>
+                <h3 className="text-slate-900 dark:text-white font-bold mb-1">Location</h3>
+                <p className="text-slate-600 dark:text-gray-400">Pakistan</p>
               </div>
             </div>
           </div>
@@ -76,7 +76,7 @@ export default function Contact() {
               <input
                 type="text"
                 placeholder="Your Name"
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-200"
+                className="w-full px-4 py-3 bg-slate-100/70 dark:bg-gray-800/50 border border-slate-200 dark:border-gray-700 rounded-xl text-slate-900 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-200"
                 required
               />
             </div>
@@ -84,7 +84,7 @@ export default function Contact() {
               <input
                 type="email"
                 placeholder="Your Email"
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-200"
+                className="w-full px-4 py-3 bg-slate-100/70 dark:bg-gray-800/50 border border-slate-200 dark:border-gray-700 rounded-xl text-slate-900 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-200"
                 required
               />
             </div>
@@ -92,13 +92,13 @@ export default function Contact() {
               <textarea
                 placeholder="Your Message"
                 rows="4"
-                className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-200 resize-none"
+                className="w-full px-4 py-3 bg-slate-100/70 dark:bg-gray-800/50 border border-slate-200 dark:border-gray-700 rounded-xl text-slate-900 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-200 resize-none"
                 required
               ></textarea>
             </div>
             <button
               type="submit"
-              className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-violet-600 hover:from-blue-400 hover:to-violet-500 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 transition-all hover:scale-105 duration-200 flex items-center justify-center gap-2"
+              className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-violet-600 hover:from-blue-400 hover:to-violet-500 text-slate-900 dark:text-white font-semibold rounded-xl shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 transition-all hover:scale-105 duration-200 flex items-center justify-center gap-2"
             >
               <Send className="w-4.5 h-4.5" />
               <span>Send Message</span>

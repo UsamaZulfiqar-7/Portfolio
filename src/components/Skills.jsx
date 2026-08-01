@@ -8,7 +8,7 @@ function SkillBar({ name, level, icon, inView, delay = 0 }) {
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-2">
           <span className="text-lg">{icon}</span>
-          <span className="text-gray-300 font-medium text-sm">{name}</span>
+          <span className="text-slate-700 dark:text-gray-300 font-medium text-sm">{name}</span>
         </div>
         <span className="text-blue-400 text-xs font-bold">{level}%</span>
       </div>
@@ -70,7 +70,7 @@ export default function Skills() {
       ref={ref}
       className="py-24 px-4 sm:px-6 relative overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gray-950">
+      <div className="absolute inset-0 bg-slate-50 dark:bg-gray-950">
         <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full opacity-5 bg-violet-500 blur-3xl" />
       </div>
       <div className="relative z-10 max-w-6xl mx-auto">
@@ -80,14 +80,14 @@ export default function Skills() {
           <span className="text-blue-400 font-semibold text-sm tracking-widest uppercase mb-3 block">
             What I Know
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl font-black text-slate-900 dark:text-white mb-4">
             My{" "}
             <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
               Skills
             </span>
           </h2>
           <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-violet-500 mx-auto rounded-full mb-6" />
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-slate-600 dark:text-gray-400 max-w-2xl mx-auto">
             A blend of frontend engineering and data analytics skills,
             continuously growing through real-world projects.
           </p>
@@ -99,7 +99,7 @@ export default function Skills() {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-4 py-2 rounded-xl text-sm font-semibold capitalize transition-all duration-200 ${activeTab === tab ? "bg-gradient-to-r from-blue-500 to-violet-600 text-white shadow-lg shadow-blue-500/25" : "bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700"}`}
+              className={`px-4 py-2 rounded-xl text-sm font-semibold capitalize transition-all duration-200 ${activeTab === tab ? "bg-gradient-to-r from-blue-500 to-violet-600 text-slate-900 dark:text-white shadow-lg shadow-blue-500/25" : "bg-slate-100 dark:bg-gray-800 text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white hover:bg-gray-700"}`}
             >
               {tab === "all" ? "All Skills" : tab}
             </button>
@@ -112,12 +112,12 @@ export default function Skills() {
               className={`transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
               style={{ transitionDelay: `${i * 100 + 300}ms` }}
             >
-              <div className="p-6 rounded-2xl bg-gray-800/40 border border-gray-700/40 hover:border-gray-600/60 transition-all duration-300 hover:-translate-y-1">
+              <div className="p-6 rounded-2xl bg-slate-100/60 dark:bg-gray-800/40 border border-slate-200/40 dark:border-gray-700/40 hover:border-slate-300 dark:hover:border-gray-600/60 transition-all duration-300 hover:-translate-y-1">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500/20 to-violet-500/20 border border-blue-500/20 flex items-center justify-center text-xl">
                     {cat.icon}
                   </div>
-                  <h3 className="text-white font-bold">{cat.title}</h3>
+                  <h3 className="text-slate-900 dark:text-white font-bold">{cat.title}</h3>
                 </div>
                 <div className="space-y-4">
                   {cat.items.map((skill, j) => (
@@ -136,7 +136,7 @@ export default function Skills() {
         <div
           className={`mt-16 transition-all duration-700 delay-500 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          <p className="text-center text-gray-500 text-sm mb-6 uppercase tracking-widest">
+          <p className="text-center text-slate-500 dark:text-gray-500 text-sm mb-6 uppercase tracking-widest">
             Core Technologies
           </p>
           <div className="flex flex-wrap justify-center gap-3">
@@ -158,7 +158,7 @@ export default function Skills() {
             ].map((tech) => (
               <span
                 key={tech}
-                className="px-4 py-2 bg-gray-800/60 border border-gray-700/50 text-gray-300 text-sm rounded-xl hover:border-blue-500/40 hover:text-white hover:bg-gray-800 transition-all duration-200 cursor-default hover:-translate-y-0.5"
+                className="px-4 py-2 bg-slate-100/80 dark:bg-gray-800/60 border border-slate-200/50 dark:border-gray-700/50 text-slate-700 dark:text-gray-300 text-sm rounded-xl hover:border-blue-500/40 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-gray-800 transition-all duration-200 cursor-default hover:-translate-y-0.5"
               >
                 {tech}
               </span>
