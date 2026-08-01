@@ -68,6 +68,7 @@ export default function Projects() {
                 className={`h-48 bg-gradient-to-br ${p.gradient} relative flex items-center justify-center p-6 text-center overflow-hidden`}
               >
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300" />
+                <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.5),transparent_40%),radial-gradient(circle_at_80%_80%,rgba(255,255,255,0.3),transparent_35%)]" />
                 <span className="text-slate-900 dark:text-white/95 font-extrabold text-2xl tracking-wide drop-shadow-md z-10 transition-transform duration-300 group-hover:scale-105">
                   {p.title}
                 </span>

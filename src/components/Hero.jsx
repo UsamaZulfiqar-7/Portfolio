@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+import Lottie from "lottie-react";
 import { personalInfo, socialLinks } from "../data/config";
 import profileImg from "./profile.jpeg";
 import cvPdf from "./Usama_Zulfiqar_CV.pdf";
 import { MagneticButton, Spotlight, RevealText } from "./ui/VengeanceUI";
+import heroOrb from "./ui/hero-orb.json";
 const typingTexts = [
   "Frontend Web Developer",
   "Data Analyst",
@@ -193,6 +195,12 @@ export default function Hero() {
               }}
             />
             <div className="absolute inset-10 rounded-3xl border border-slate-200/50 dark:border-gray-700/50 flex items-center justify-center shadow-2xl overflow-hidden group">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 via-transparent to-violet-500/20" />
+              <Lottie
+                animationData={heroOrb}
+                loop
+                className="absolute inset-0 w-full h-full scale-125 opacity-70"
+              />
               <img
                 src={profileImg}
                 alt={personalInfo.name}
