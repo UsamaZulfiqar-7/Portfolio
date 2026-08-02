@@ -32,11 +32,9 @@ export default function App() {
 
   return (
     <ThemeContext.Provider value={{ dark, toggleTheme }}>
-      <div
-        className={dark ? "dark" : ""}
-        style={{ fontFamily: "'Syne', sans-serif" }}
-      >
-        <div className="bg-slate-50 dark:bg-gray-950 dark:bg-gray-950 text-slate-900 dark:text-white min-h-screen transition-colors duration-500">
+      <div className={dark ? "dark" : ""} style={{ fontFamily: "'Inter', sans-serif" }}>
+        <div className="relative min-h-screen overflow-hidden bg-slate-950 text-slate-100 transition-colors duration-500">
+          <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,211,238,0.12),transparent_28%),radial-gradient(circle_at_85%_10%,rgba(168,85,247,0.16),transparent_30%)]" />
           <CursorGlow />
           <ScrollProgress />
           <Navbar />

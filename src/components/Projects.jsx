@@ -25,8 +25,8 @@ export default function Projects() {
       ref={ref}
       className="py-24 px-4 sm:px-6 relative overflow-hidden"
     >
-      <div className="absolute inset-0 bg-slate-50 dark:bg-gray-950">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full opacity-5 bg-blue-500 blur-3xl" />
+      <div className="absolute inset-0 bg-slate-950">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full opacity-10 bg-cyan-400 blur-3xl" />
       </div>
       <div className="relative z-10 max-w-6xl mx-auto">
         <div
@@ -35,9 +35,9 @@ export default function Projects() {
           <span className="text-blue-400 font-semibold text-sm tracking-widest uppercase mb-3 block">
             My Portfolio
           </span>
-          <h2 className="text-4xl sm:text-5xl font-black text-slate-900 dark:text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl font-black text-white mb-4">
             Featured{" "}
-            <span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-300 to-violet-400 bg-clip-text text-transparent">
               Projects
             </span>
           </h2>
@@ -50,7 +50,7 @@ export default function Projects() {
             <button
               key={cat}
               onClick={() => setActiveFilter(cat)}
-              className={`px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${activeFilter === cat ? "bg-gradient-to-r from-blue-500 to-violet-600 text-slate-900 dark:text-white shadow-lg shadow-blue-500/25" : "bg-slate-100 dark:bg-gray-800 text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white hover:bg-gray-700"}`}
+              className={`px-4 py-2 rounded-xl text-sm font-semibold transition-all duration-200 ${activeFilter === cat ? "bg-gradient-to-r from-cyan-500 to-violet-600 text-white shadow-lg shadow-cyan-500/25" : "bg-slate-900/80 text-slate-300 border border-slate-800 hover:text-white hover:border-cyan-400/40"}`}
             >
               {cat}
             </button>

@@ -62,17 +62,17 @@ export default function Hero() {
       id="hero"
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
     >
-      <div className="absolute inset-0 bg-slate-50 dark:bg-gray-950">
+      <div className="absolute inset-0 bg-slate-950">
         <Spotlight />
         <div
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "radial-gradient(ellipse at 20% 50%, rgba(59,130,246,0.12) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(139,92,246,0.12) 0%, transparent 50%)",
+              "radial-gradient(ellipse at 20% 50%, rgba(34,211,238,0.16) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(168,85,247,0.16) 0%, transparent 50%)",
           }}
         />
         <div
-          className="absolute inset-0 opacity-[0.04]"
+          className="absolute inset-0 opacity-[0.05]"
           style={{
             backgroundImage:
               "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)",
@@ -106,23 +106,23 @@ export default function Hero() {
         <div
           className={`flex-1 text-center lg:text-left transition-all duration-1000 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-400/10 border border-cyan-400/20 text-cyan-300 text-sm font-medium mb-6 backdrop-blur-sm">
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
             Available for Work
           </div>
-          <div className="text-5xl sm:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white leading-tight mb-4">
-            <RevealText text="Hi, I'm" className="mb-2" />
-            <span className="bg-gradient-to-r from-blue-400 via-violet-400 to-cyan-400 bg-clip-text text-transparent inline-block">
+          <div className="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight mb-4">
+            <RevealText text="Hi, I'm" className="mb-2 text-slate-200" />
+            <span className="bg-gradient-to-r from-cyan-300 via-sky-400 to-violet-400 bg-clip-text text-transparent inline-block">
               <RevealText text={personalInfo.name} />
             </span>
           </div>
           <div className="h-10 flex items-center justify-center lg:justify-start mb-6">
-            <span className="text-xl sm:text-2xl text-slate-700 dark:text-gray-300 font-light">
+            <span className="text-xl sm:text-2xl text-slate-300 font-light">
               {typedText}
               <span className="inline-block w-0.5 h-6 bg-blue-400 ml-1 animate-pulse" />
             </span>
           </div>
-          <p className="text-slate-600 dark:text-gray-400 text-lg max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
+          <p className="text-slate-400 text-lg max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
             {personalInfo.tagline}
           </p>
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-8">
