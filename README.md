@@ -19,14 +19,6 @@ A modern, animated personal portfolio website built with React, Vite, Tailwind C
 - Lucide Icons
 - Lottie React
 
-## 📸 Screenshots
-
-### Hero Section
-![Hero Preview](src/components/profile.jpeg)
-
-### Project Showcase
-Coming soon — add a screenshot of the projects section here.
-
 ## ▶️ Run Locally
 
 ```bash
@@ -48,9 +40,10 @@ src/
 
 ## 🔗 Links
 
-- Portfolio: https://github.com/UsamaZulfiqar-7/Portfolio
+- Live Portfolio: https://usamazulfiqar-7.github.io/Portfolio/
+- GitHub Repository: https://github.com/UsamaZulfiqar-7/Portfolio
 - LinkedIn: https://www.linkedin.com/in/rana-usama-1433aa278/?skipRedirect=true
-- GitHub: https://github.com/UsamaZulfiqar-7
+- GitHub Profile: https://github.com/UsamaZulfiqar-7
 
 ## 📬 Contact
 
