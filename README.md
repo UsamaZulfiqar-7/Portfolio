@@ -42,7 +42,7 @@ src/
 
 - Live Portfolio: https://usamazulfiqar-7.github.io/Portfolio/
 - GitHub Repository: https://github.com/UsamaZulfiqar-7/Portfolio
-- LinkedIn: https://www.linkedin.com/in/rana-usama-1433aa278/?skipRedirect=true
+- LinkedIn: https://www.linkedin.com/in/usama-zulfiqar-2570ba343/
 - GitHub Profile: https://github.com/UsamaZulfiqar-7
 
 ## 📬 Contact
