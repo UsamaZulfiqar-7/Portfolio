@@ -36,7 +36,7 @@ export const skills = {
   database: [
     { name: "MySQL", level: 80, icon: "🗄️" },
     { name: "MongoDB", level: 75, icon: "🍃" },
-    { name: "Database Design", level: 85, icon: "🏗️" },
+    { name: "Database Design", level: 80, icon: "🏗️" },
     { name: "Query Optimization", level: 80, icon: "⚡" },
   ],
   dataAnalytics: [
@@ -49,7 +49,7 @@ export const skills = {
     { name: "VS Code", level: 95, icon: "💻" },
     { name: "GitHub", level: 90, icon: "🐙" },
     { name: "Figma", level: 70, icon: "🎭" },
-    { name: "Postman", level: 85, icon: "🔧" },
+    { name: "Postman", level: 80, icon: "🔧" },
   ],
 };
 
