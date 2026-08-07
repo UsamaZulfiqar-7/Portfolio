@@ -22,10 +22,10 @@ export const stats = [
 
 export const skills = {
   frontend: [
-    { name: "React.js", level: 90, icon: "⚛️" },
+    { name: "React.js", level: 75, icon: "⚛️" },
     { name: "Tailwind CSS", level: 85, icon: "🎨" },
     { name: "HTML/CSS", level: 95, icon: "🌐" },
-    { name: "JavaScript", level: 90, icon: "📝" },
+    { name: "JavaScript", level: 80, icon: "📝" },
   ],
   programming: [
     { name: "Python", level: 85, icon: "🐍" },
