@@ -8,7 +8,7 @@ export const personalInfo = {
 
 export const socialLinks = {
   github: "https://github.com/UsamaZulfiqar-7",
-  linkedin: "https://www.linkedin.com/in/rana-usama-1433aa278/?skipRedirect=true",
+  linkedin: "https://www.linkedin.com/in/usama-zulfiqar-2570ba343/",
   twitter: "https://twitter.com",
   email: "usamazulfiqar173@gmail.com",
 };
@@ -55,71 +55,90 @@ export const skills = {
 
 export const projects = [
   {
-    id: 1,
-    title: "E-Commerce Platform",
-    description:
-      "Full-stack MERN application with payment integration, real-time inventory tracking, and admin dashboard for managing products and orders.",
-    category: "Web Development",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    gradient: "from-blue-500 to-cyan-500",
-    github: "https://github.com/UsamaZulfiqar-7/ecommerce",
-    demo: "https://ecommerce-demo.com",
-  },
+  id: 1,
+  title: "LostLink-AI-Web-App",
+  description:
+    "Smart Lost and Found web application that connects people who lose items with people who find them. The system uses role-based authentication, QR codes, location tracking, real-time notifications, admin-approved chat, and ResNet50 AI-powered image similarity matching to identify potential lost and found item matches.",
+  category: "Web Development",
+  tech: [
+    "React.js",
+    "Vite",
+    "Tailwind CSS",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Mongoose",
+    "Python",
+    "FastAPI",
+    "ResNet50",
+    "Socket.io",
+    "JWT",
+    "QR Code",
+    "Leaflet",
+    "Framer Motion"
+  ],
+  gradient: "from-blue-500 to-purple-600",
+  github: "https://github.com/UsamaZulfiqar-7/LostLink-AI-Web-App.git",
+},
   {
     id: 2,
-    title: "Sales Analytics Dashboard",
+    title: "CleanAI — Smart Data Cleaning Assistant",
     description:
-      "Interactive Power BI dashboard analyzing quarterly sales trends, customer segmentation, and regional performance metrics with automated reporting.",
+      "AI-assisted data cleaning tool that detects column types automatically, removes duplicates, patches missing values, validates emails/phones, standardizes dates, flags outliers, and generates a full data quality dashboard with a downloadable PDF report.",
     category: "Data Analytics",
-    tech: ["Power BI", "Python", "Excel"],
-    gradient: "from-emerald-500 to-teal-500",
-    github: "https://github.com/UsamaZulfiqar-7/analytics",
-    demo: "https://analytics-demo.com",
+    tech: ["Python", "Streamlit", "Pandas", "Plotly", "ReportLab"],
+    gradient: "from-amber-500 to-emerald-600",
+    github: "https://github.com/UsamaZulfiqar-7/CleanAI",
   },
   {
     id: 3,
-    title: "Machine Learning Model",
+    title: "Secret Love Surprise",
     description:
-      "Predictive ML model using scikit-learn and TensorFlow to forecast customer churn with 92% accuracy, including comprehensive data preprocessing.",
-    category: "Machine Learning",
-    tech: ["Python", "TensorFlow", "Pandas"],
-    gradient: "from-violet-500 to-purple-500",
-    github: "https://github.com/UsamaZulfiqar-7/ml-model",
-    demo: "https://ml-demo.com",
-  },
-  {
-    id: 4,
-    title: "Task Management App",
-    description:
-      "React app with drag-and-drop functionality, team collaboration features, and real-time updates using Firebase and Context API.",
+        "A romantic interactive surprise website featuring a secret love message, special memories, photos, and memorable moments with an elegant and engaging user experience.",
     category: "Web Development",
-    tech: ["React", "Firebase", "Tailwind"],
+    tech: ["HTML", "CSS", "JavaScript"],
     gradient: "from-pink-500 to-rose-500",
-    github: "https://github.com/UsamaZulfiqar-7/tasks",
-    demo: "https://tasks-demo.com",
-  },
+    github: "https://github.com/UsamaZulfiqar-7/Secret-Love-Surprise",
+},
   {
-    id: 5,
-    title: "Customer Insights Report",
-    description:
-      "Comprehensive data analysis using Python (pandas, matplotlib) to extract business intelligence from customer datasets with actionable recommendations.",
-    category: "Data Analytics",
-    tech: ["Python", "Pandas", "Matplotlib"],
-    gradient: "from-orange-500 to-yellow-500",
-    github: "https://github.com/UsamaZulfiqar-7/insights",
-    demo: "https://insights-demo.com",
-  },
+  id: 4,
+  title: "SAM — Voice-Controlled Desktop Agent",
+  description:
+    "Wake-word activated Windows automation agent built in Python. Listens for voice commands and performs system tasks — opening apps, web/YouTube search, volume control, screenshots, PC lock/shutdown, and file search — with offline text-to-speech feedback. ⚠️ Still in progress — not complete yet, actively being refined and tested.",
+  category: "AI / Automation",
+  tech: ["Python", "SpeechRecognition", "PyAudio", "pyttsx3", "PyAutoGUI", "Anthropic API"],
+  gradient: "from-indigo-500 to-purple-500",
+  status: "In Progress",
+  github: "https://github.com/UsamaZulfiqar-7/Sam-Agent.git",
+},
   {
-    id: 6,
-    title: "Weather Forecasting API",
+  id: 5,
+  title: "SQL Sales Dataset Project",
+  description:
+    "SQL-based data analysis project using Customers, Orders, and Products datasets to practice relational database concepts, complex SQL queries, joins, aggregations, filtering, and sales insights.",
+  category: "Database & SQL",
+  tech: ["SQL", "MySQL", "Database", "Data Analysis"],
+  gradient: "from-cyan-500 to-blue-600",
+  github: "https://github.com/UsamaZulfiqar-7/SQL-Sales-Dataset-Project.git",
+},
+  {
+    id: 3,
+    title: "Namaz Accountability Lock",
     description:
-      "RESTful API built with Node.js and Express, integrated with real-time weather data providers, deployed on AWS with comprehensive documentation.",
-    category: "Web Development",
-    tech: ["Node.js", "Express", "AWS"],
-    gradient: "from-sky-500 to-blue-500",
-    github: "https://github.com/UsamaZulfiqar-7/weather",
-    demo: "https://weather-demo.com",
-  },
+        "A premium Android Islamic digital-wellbeing app that helps users maintain prayer consistency through configurable reminders, accountability tracking, prayer streaks, and an optional phone restriction system when a prayer is missed.Not Complete Yet.",
+    category: "Android Development",
+    tech: [
+        "Kotlin",
+        "Jetpack Compose",
+        "Android SDK",
+        "Room",
+        "DataStore",
+        "WorkManager",
+        "AlarmManager"
+    ],
+    gradient: "from-emerald-500 to-teal-500",
+    github: "https://github.com/YourUsername/namaz-accountability-lock",
+},
 ];
 
 export const education = [

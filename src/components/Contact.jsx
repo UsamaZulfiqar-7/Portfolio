@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { useInView } from "../hooks/useInView";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { socialLinks } from "../data/config";
 export default function Contact() {
   const ref = useRef(null);
   const inView = useInView(ref, 0.1);
@@ -42,10 +43,10 @@ export default function Contact() {
               <div>
                 <h3 className="text-slate-900 dark:text-white font-bold mb-1">Email</h3>
                 <a
-                  href="mailto:usama@example.com"
+                  href={`mailto:${socialLinks.email}`}
                   className="text-slate-600 dark:text-gray-400 hover:text-blue-400 transition-colors"
                 >
-                  usamazulfiqar173@gmail.com
+                  {socialLinks.email}
                 </a>
               </div>
             </div>

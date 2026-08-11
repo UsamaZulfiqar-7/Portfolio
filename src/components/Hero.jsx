@@ -123,7 +123,7 @@ export default function Hero() {
             </span>
           </div>
           <p className="text-slate-400 text-lg max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-            {personalInfo.tagline}
+            {personalInfo.description}
           </p>
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mb-8">
             <MagneticButton
@@ -170,7 +170,7 @@ export default function Hero() {
               </svg>
             </a>
             <a
-              href={socialLinks.gmail}
+              href={"mailto:" + socialLinks.email}
               className="w-11 h-11 rounded-xl bg-slate-100 dark:bg-gray-800 hover:bg-red-500/20 border border-transparent hover:border-red-500/30 flex items-center justify-center text-slate-600 dark:text-gray-400 hover:text-red-400 transition-all duration-200 hover:scale-110 hover:-translate-y-1"
             >
               <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -206,7 +206,7 @@ export default function Hero() {
                 alt={personalInfo.name}
                 className="absolute inset-0 w-full h-full object-cover filter brightness-[0.8] group-hover:scale-105 transition-transform duration-700 ease-out"
               />
-              <div className="absolute bottom-3 left-3 right-3 bg-slate-50/80 dark:bg-gray-950/80 backdrop-blur-md border border-slate-200/80 dark:border-gray-800/80 p-3.5 rounded-2xl font-mono text-[10px] sm:text-xs leading-normal opacity-90 transition-all duration-300 group-hover:bg-slate-50/90 dark:group-hover:bg-slate-50 dark:-hover:bg-gray-950/90 shadow-lg z-10">
+              <div className="absolute bottom-3 left-3 right-3 bg-slate-50/80 dark:bg-gray-950/80 backdrop-blur-md border border-slate-200/80 dark:border-gray-800/80 p-3.5 rounded-2xl font-mono text-[10px] sm:text-xs leading-normal opacity-90 transition-all duration-300 group-hover:bg-slate-50/90 dark:group-hover:bg-gray-950/90 shadow-lg z-10">
                 <div className="flex items-center gap-1.5 mb-2">
                   <div className="w-2.5 h-2.5 rounded-full bg-red-400" />
                   <div className="w-2.5 h-2.5 rounded-full bg-yellow-400" />

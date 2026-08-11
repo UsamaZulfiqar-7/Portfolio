@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { projects } from "../data/config";
 import { useInView } from "../hooks/useInView";
-import { Github } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 import { TiltCard } from "./ui/SkiperUI";
 export default function Projects() {
   const ref = useRef(null);
@@ -101,7 +101,17 @@ export default function Projects() {
                     <Github className="w-4.5 h-4.5" />
                     <span>Source</span>
                   </a>
-
+                  {p.demo && (
+                    <a
+                      href={p.demo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center gap-1.5 text-slate-600 dark:text-gray-400 hover:text-slate-900 dark:hover:text-white text-sm font-semibold transition-colors group/link"
+                    >
+                      <ExternalLink className="w-4.5 h-4.5" />
+                      <span>Demo</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>

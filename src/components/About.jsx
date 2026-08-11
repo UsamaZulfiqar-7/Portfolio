@@ -47,7 +47,7 @@ export default function About() {
               BSCS Final Year Student & Developer
             </h3>
             <p className="text-slate-600 dark:text-gray-400 leading-relaxed mb-6">
-              {personalInfo.bio}
+              {personalInfo.description}
             </p>
             <p className="text-slate-600 dark:text-gray-400 leading-relaxed mb-8">
               Currently pursuing my Bachelor's in Computer Science, I've built
