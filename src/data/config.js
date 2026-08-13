@@ -227,8 +227,3 @@ export const services = [
 ];
 
 export const githubUsername = "UsamaZulfiqar-7";
-export const emailjsConfig = {
-  serviceId: "service_id",
-  templateId: "template_id",
-  publicKey: "public_key",
-};
