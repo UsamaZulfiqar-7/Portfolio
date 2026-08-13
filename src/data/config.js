@@ -1,6 +1,6 @@
 export const emailjsConfig = {
   serviceId: "service_2d246rw",
-  templateId: "qq6hdxl",
+  templateId: "template_ybw04bm",
   publicKey: "qHTCt3cwJzvpDhxMN", // Account > General > API Keys se le kar yahan paste karo
 };
 export const personalInfo = {
