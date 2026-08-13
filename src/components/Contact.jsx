@@ -1,13 +1,43 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useInView } from "../hooks/useInView";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { socialLinks } from "../data/config";
+import { Mail, Phone, MapPin, Send, CheckCircle, XCircle } from "lucide-react";
+import { socialLinks, emailjsConfig } from "../data/config";
+import emailjs from "@emailjs/browser";
+
 export default function Contact() {
   const ref = useRef(null);
+  const formRef = useRef(null);
   const inView = useInView(ref, 0.1);
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState(null); // "success" | "error" | null
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setStatus(null);
+
+    emailjs
+      .sendForm(
+        emailjsConfig.serviceId,
+        emailjsConfig.templateId,
+        formRef.current,
+        emailjsConfig.publicKey
+      )
+      .then(() => {
+        setStatus("success");
+        formRef.current.reset();
+      })
+      .catch((error) => {
+        console.error("EmailJS error:", error);
+        setStatus("error");
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+        setTimeout(() => setStatus(null), 5000);
+      });
   };
+
   return (
     <section
       id="contact"
@@ -42,8 +72,8 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="text-slate-900 dark:text-white font-bold mb-1">Email</h3>
-                <a
-                  href={`mailto:${socialLinks.email}`}
+                
+                 <a href={`mailto:${socialLinks.email}`}
                   className="text-slate-600 dark:text-gray-400 hover:text-blue-400 transition-colors"
                 >
                   {socialLinks.email}
@@ -70,12 +100,14 @@ export default function Contact() {
             </div>
           </div>
           <form
+            ref={formRef}
             onSubmit={handleSubmit}
             className={`space-y-4 transition-all duration-700 delay-200 ${inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"}`}
           >
             <div>
               <input
                 type="text"
+                name="user_name"
                 placeholder="Your Name"
                 className="w-full px-4 py-3 bg-slate-100/70 dark:bg-gray-800/50 border border-slate-200 dark:border-gray-700 rounded-xl text-slate-900 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-200"
                 required
@@ -84,6 +116,7 @@ export default function Contact() {
             <div>
               <input
                 type="email"
+                name="user_email"
                 placeholder="Your Email"
                 className="w-full px-4 py-3 bg-slate-100/70 dark:bg-gray-800/50 border border-slate-200 dark:border-gray-700 rounded-xl text-slate-900 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-200"
                 required
@@ -91,6 +124,7 @@ export default function Contact() {
             </div>
             <div>
               <textarea
+                name="message"
                 placeholder="Your Message"
                 rows="4"
                 className="w-full px-4 py-3 bg-slate-100/70 dark:bg-gray-800/50 border border-slate-200 dark:border-gray-700 rounded-xl text-slate-900 dark:text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all duration-200 resize-none"
@@ -99,11 +133,25 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-violet-600 hover:from-blue-400 hover:to-violet-500 text-slate-900 dark:text-white font-semibold rounded-xl shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 transition-all hover:scale-105 duration-200 flex items-center justify-center gap-2"
+              disabled={isSubmitting}
+              className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-violet-600 hover:from-blue-400 hover:to-violet-500 text-slate-900 dark:text-white font-semibold rounded-xl shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30 transition-all hover:scale-105 duration-200 flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
             >
               <Send className="w-4.5 h-4.5" />
-              <span>Send Message</span>
+              <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
             </button>
+
+            {status === "success" && (
+              <div className="flex items-center gap-2 text-emerald-500 text-sm font-medium justify-center pt-1">
+                <CheckCircle className="w-4 h-4" />
+                <span>Message sent successfully!</span>
+              </div>
+            )}
+            {status === "error" && (
+              <div className="flex items-center gap-2 text-red-500 text-sm font-medium justify-center pt-1">
+                <XCircle className="w-4 h-4" />
+                <span>Something went wrong. Try again.</span>
+              </div>
+            )}
           </form>
         </div>
       </div>

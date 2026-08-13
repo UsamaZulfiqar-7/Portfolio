@@ -1,3 +1,8 @@
+export const emailjsConfig = {
+  serviceId: "service_2d246rw",
+  templateId: "qq6hdxl",
+  publicKey: "qHTCt3cwJzvpDhxMN", // Account > General > API Keys se le kar yahan paste karo
+};
 export const personalInfo = {
   name: "Usama Zulfiqar",
   title: "Full Stack Developer & Data Analyst",
