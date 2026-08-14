@@ -44,16 +44,13 @@ export default function About() {
               </div>
             </div>
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">
-              BSCS Final Year Student & Developer
+              BSCS Graduate & Software Engineer
             </h3>
             <p className="text-slate-600 dark:text-gray-400 leading-relaxed mb-6">
               {personalInfo.description}
             </p>
             <p className="text-slate-600 dark:text-gray-400 leading-relaxed mb-8">
-              Currently pursuing my Bachelor's in Computer Science, I've built
-              expertise in both frontend development and data analytics. I'm
-              passionate about AI, modern web technologies, and using data to
-              drive impactful decisions.
+              I hold a Bachelor's degree in Computer Science with a strong foundation in software engineering, data structures, and modern web technologies. I've built expertise across full-stack development and data analytics, and I'm passionate about AI, scalable web solutions, and turning data into decisions that matter.
             </p>
             <div className="grid grid-cols-2 gap-4 mb-8">
               {[
@@ -111,8 +108,8 @@ export default function About() {
               {[
                 {
                   icon: "🎓",
-                  title: "BSCS Final Year",
-                  desc: "Graduating with strong CS foundations",
+                  title: "BSCS Graduate",
+                  desc: "Strong CS foundations, ready to build",
                 },
                 {
                   icon: "💻",
