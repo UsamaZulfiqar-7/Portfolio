@@ -35,6 +35,7 @@ export default function Navbar() {
   const scrollTo = (href) => {
     const el = document.querySelector(href);
     if (el) el.scrollIntoView({ behavior: "smooth" });
+    setActive(href.slice(1));
     setMenuOpen(false);
   };
   return (
